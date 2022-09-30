@@ -1,0 +1,18 @@
+<!--@Subject Email Template @-->
+<!--@vars
+{"store url=\"\"":"Store Url",
+"skin url=\"images/logo_email.gif\" _area='frontend'":"Email Logo Image"}
+@-->
+<!--@styles
+body,td { color:#2f2f2f; font:11px/1.35em Verdana, Arial, Helvetica, sans-serif; }
+@-->
+{{template config_path="design/email/header_template"}}
+
+<p>{{trans "Hi "}} {{var customer_name}},</p>
+<p>
+{{trans "Thank You for Registering,"}}
+{{trans "We will send You Link along with the Password for you to log in. Stay connected for updates."}}
+</p>
+
+{{var store.getFrontendName()}}
+{{template config_path="design/email/footer_template"}}
